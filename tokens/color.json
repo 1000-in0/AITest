@@ -1,0 +1,540 @@
+{
+  "color": {
+    "primitive": {
+      "white": { "value": "#ffffff", "type": "color" },
+      "black": { "value": "#000000", "type": "color" },
+      "alpha": {
+        "value": "rgba(0, 0, 0, 0)",
+        "type": "color",
+        "comment": "Figma: primitives(atomic).light.colors.alpha. 현재 확인된 semantic 토큰 중 이 값을 직접 참조하는 곳은 없음(참고용 보존)."
+      },
+      "overlay": {
+        "gray-900-0": { "value": "rgba(42, 49, 55, 0)", "type": "color" },
+        "gray-900-32": { "value": "rgba(42, 49, 55, 0.32)", "type": "color" },
+        "gray-900-40": { "value": "rgba(42, 49, 55, 0.4)", "type": "color" },
+        "gray-900-90": { "value": "rgba(42, 49, 55, 0.9)", "type": "color" }
+      },
+      "gray": {
+        "050": { "value": "#fafbfc", "type": "color" },
+        "100": { "value": "#f6f8fa", "type": "color" },
+        "150": { "value": "#f2f6f9", "type": "color" },
+        "200": { "value": "#eff4f8", "type": "color" },
+        "250": { "value": "#ecf1f5", "type": "color" },
+        "300": { "value": "#e9eef2", "type": "color" },
+        "350": { "value": "#e4e9ed", "type": "color" },
+        "400": { "value": "#dadfe4", "type": "color" },
+        "450": { "value": "#ccd1d6", "type": "color" },
+        "500": { "value": "#c0c4c9", "type": "color" },
+        "550": { "value": "#b2b6bb", "type": "color" },
+        "600": { "value": "#a5abb1", "type": "color" },
+        "650": { "value": "#90969d", "type": "color" },
+        "700": { "value": "#767d84", "type": "color" },
+        "750": { "value": "#565e66", "type": "color" },
+        "800": { "value": "#454e56", "type": "color" },
+        "850": { "value": "#3c444b", "type": "color" },
+        "900": { "value": "#2a3137", "type": "color" },
+        "950": { "value": "#20262a", "type": "color" }
+      },
+      "red": {
+        "050": { "value": "#fffbfb", "type": "color" },
+        "100": { "value": "#fff6f5", "type": "color" },
+        "150": { "value": "#fff0ef", "type": "color" },
+        "200": { "value": "#ffeceb", "type": "color" },
+        "250": { "value": "#ffe3e1", "type": "color" },
+        "300": { "value": "#ffd9d7", "type": "color" },
+        "350": { "value": "#ffd0cd", "type": "color" },
+        "400": { "value": "#ffc7c3", "type": "color" },
+        "450": { "value": "#ffb4af", "type": "color" },
+        "500": { "value": "#ff9d98", "type": "color" },
+        "550": { "value": "#ff837c", "type": "color" },
+        "600": { "value": "#ff695f", "type": "color" },
+        "650": { "value": "#ff4337", "type": "color" },
+        "700": { "value": "#d2362c", "type": "color" },
+        "750": { "value": "#a52921", "type": "color" },
+        "800": { "value": "#781c16", "type": "color" },
+        "850": { "value": "#621611", "type": "color" },
+        "900": { "value": "#4b0f0b", "type": "color" },
+        "950": { "value": "#390906", "type": "color" }
+      },
+      "yellow": {
+        "050": { "value": "#fffcf8", "type": "color" },
+        "100": { "value": "#fffbf4", "type": "color" },
+        "150": { "value": "#fff9ef", "type": "color" },
+        "200": { "value": "#fff7ea", "type": "color" },
+        "250": { "value": "#fff3e1", "type": "color" },
+        "300": { "value": "#fff0da", "type": "color" },
+        "350": { "value": "#ffe9c8", "type": "color" },
+        "400": { "value": "#ffe1b5", "type": "color" },
+        "450": { "value": "#ffd390", "type": "color" },
+        "500": { "value": "#ffc46b", "type": "color" },
+        "550": { "value": "#ffb546", "type": "color" },
+        "600": { "value": "#d59638", "type": "color" },
+        "650": { "value": "#ab772a", "type": "color" },
+        "700": { "value": "#80591c", "type": "color" },
+        "750": { "value": "#6b4915", "type": "color" },
+        "800": { "value": "#563a0e", "type": "color" },
+        "850": { "value": "#412a07", "type": "color" },
+        "900": { "value": "#2c1b00", "type": "color" },
+        "950": { "value": "#221500", "type": "color" }
+      },
+      "lime": {
+        "050": { "value": "#fafdf7", "type": "color" },
+        "100": { "value": "#f8fcf3", "type": "color" },
+        "150": { "value": "#f5fbee", "type": "color" },
+        "200": { "value": "#f1fae6", "type": "color" },
+        "250": { "value": "#ebf8de", "type": "color" },
+        "300": { "value": "#e5f6d6", "type": "color" },
+        "350": { "value": "#e0f2cb", "type": "color" },
+        "400": { "value": "#d5eeba", "type": "color" },
+        "450": { "value": "#c0e697", "type": "color" },
+        "500": { "value": "#abdd75", "type": "color" },
+        "550": { "value": "#96d552", "type": "color" },
+        "600": { "value": "#7cb143", "type": "color" },
+        "650": { "value": "#628d34", "type": "color" },
+        "700": { "value": "#486826", "type": "color" },
+        "750": { "value": "#3b561e", "type": "color" },
+        "800": { "value": "#2e4417", "type": "color" },
+        "850": { "value": "#21320f", "type": "color" },
+        "900": { "value": "#142008", "type": "color" },
+        "950": { "value": "#101907", "type": "color" }
+      },
+      "green": {
+        "050": { "value": "#f9fdf9", "type": "color" },
+        "100": { "value": "#f5fbf5", "type": "color" },
+        "150": { "value": "#f0fcf0", "type": "color" },
+        "200": { "value": "#e8f9e9", "type": "color" },
+        "250": { "value": "#ddf5df", "type": "color" },
+        "300": { "value": "#d4f1d7", "type": "color" },
+        "350": { "value": "#bfebc4", "type": "color" },
+        "400": { "value": "#aae4b0", "type": "color" },
+        "450": { "value": "#7fd688", "type": "color" },
+        "500": { "value": "#55c961", "type": "color" },
+        "550": { "value": "#2abb39", "type": "color" },
+        "600": { "value": "#239b2f", "type": "color" },
+        "650": { "value": "#1c7c26", "type": "color" },
+        "700": { "value": "#145c1c", "type": "color" },
+        "750": { "value": "#114c17", "type": "color" },
+        "800": { "value": "#0d3d13", "type": "color" },
+        "850": { "value": "#0a2d0e", "type": "color" },
+        "900": { "value": "#061d09", "type": "color" },
+        "950": { "value": "#051908", "type": "color" }
+      },
+      "sky": {
+        "050": { "value": "#f7fdfe", "type": "color" },
+        "100": { "value": "#f4fcfd", "type": "color" },
+        "150": { "value": "#edfafe", "type": "color" },
+        "200": { "value": "#e0f8fc", "type": "color" },
+        "250": { "value": "#d5f6fb", "type": "color" },
+        "300": { "value": "#ccf0f9", "type": "color" },
+        "350": { "value": "#b3e8f6", "type": "color" },
+        "400": { "value": "#99e1f3", "type": "color" },
+        "450": { "value": "#66d1ee", "type": "color" },
+        "500": { "value": "#33c2e8", "type": "color" },
+        "550": { "value": "#00b3e2", "type": "color" },
+        "600": { "value": "#0093ba", "type": "color" },
+        "650": { "value": "#007492", "type": "color" },
+        "700": { "value": "#00546b", "type": "color" },
+        "750": { "value": "#004457", "type": "color" },
+        "800": { "value": "#003543", "type": "color" },
+        "850": { "value": "#00252f", "type": "color" },
+        "900": { "value": "#001b22", "type": "color" },
+        "950": { "value": "#00141a", "type": "color" }
+      },
+      "teal": {
+        "050": { "value": "#f7fdfd", "type": "color" },
+        "100": { "value": "#f4fcfc", "type": "color" },
+        "150": { "value": "#edfbfb", "type": "color" },
+        "200": { "value": "#e1faf9", "type": "color" },
+        "250": { "value": "#d4f7f5", "type": "color" },
+        "300": { "value": "#c7f4f1", "type": "color" },
+        "350": { "value": "#b3ede8", "type": "color" },
+        "400": { "value": "#99e7e0", "type": "color" },
+        "450": { "value": "#66dbd0", "type": "color" },
+        "500": { "value": "#33cfc1", "type": "color" },
+        "550": { "value": "#00c3b1", "type": "color" },
+        "600": { "value": "#00a192", "type": "color" },
+        "650": { "value": "#008074", "type": "color" },
+        "700": { "value": "#005e55", "type": "color" },
+        "750": { "value": "#004d46", "type": "color" },
+        "800": { "value": "#003d37", "type": "color" },
+        "850": { "value": "#002c27", "type": "color" },
+        "900": { "value": "#002420", "type": "color" },
+        "950": { "value": "#001513", "type": "color" }
+      },
+      "blue": {
+        "050": { "value": "#f5fbfe", "type": "color" },
+        "100": { "value": "#f0f9fe", "type": "color" },
+        "150": { "value": "#e8f6fd", "type": "color" },
+        "200": { "value": "#e0f2fc", "type": "color" },
+        "250": { "value": "#d4edfa", "type": "color" },
+        "300": { "value": "#c5e7f8", "type": "color" },
+        "350": { "value": "#aed8f1", "type": "color" },
+        "400": { "value": "#84c3e9", "type": "color" },
+        "450": { "value": "#6fb9e5", "type": "color" },
+        "500": { "value": "#5aafe1", "type": "color" },
+        "550": { "value": "#2793d5", "type": "color" },
+        "600": { "value": "#0077c8", "type": "color" },
+        "650": { "value": "#0066b0", "type": "color" },
+        "700": { "value": "#005599", "type": "color" },
+        "750": { "value": "#004581", "type": "color" },
+        "800": { "value": "#003060", "type": "color" },
+        "850": { "value": "#002744", "type": "color" },
+        "900": { "value": "#002035", "type": "color" },
+        "950": { "value": "#001828", "type": "color" }
+      },
+      "purple": {
+        "050": { "value": "#f9fafe", "type": "color" },
+        "100": { "value": "#f6f7fd", "type": "color" },
+        "150": { "value": "#f1f3fc", "type": "color" },
+        "200": { "value": "#ebeef9", "type": "color" },
+        "250": { "value": "#e2e7f7", "type": "color" },
+        "300": { "value": "#d9def5", "type": "color" },
+        "350": { "value": "#ccd3f1", "type": "color" },
+        "400": { "value": "#c0c9ed", "type": "color" },
+        "450": { "value": "#b3beea", "type": "color" },
+        "500": { "value": "#99a8e3", "type": "color" },
+        "550": { "value": "#8092dc", "type": "color" },
+        "600": { "value": "#6978b8", "type": "color" },
+        "650": { "value": "#515e94", "type": "color" },
+        "700": { "value": "#3a4571", "type": "color" },
+        "750": { "value": "#2e385f", "type": "color" },
+        "800": { "value": "#222b4d", "type": "color" },
+        "850": { "value": "#171e3b", "type": "color" },
+        "900": { "value": "#131b3a", "type": "color" },
+        "950": { "value": "#101730", "type": "color" }
+      }
+    },
+    "shape": {
+      "brand": { "value": "{color.primitive.blue.550}", "type": "color" }
+    },
+    "bg": {
+      "background": { "value": "{color.primitive.gray.250}", "type": "color" },
+      "surface-primary": {
+        "value": "{color.primitive.white}",
+        "type": "color"
+      },
+      "surface-secondary": {
+        "value": "{color.primitive.gray.050}",
+        "type": "color"
+      },
+      "surface-tertiary": {
+        "value": "{color.primitive.gray.100}",
+        "type": "color"
+      },
+      "surface-quaternary": {
+        "value": "{color.primitive.gray.150}",
+        "type": "color"
+      },
+      "surface-senary": {
+        "value": "{color.primitive.gray.200}",
+        "type": "color"
+      }
+    },
+    "component": {
+      "scrollbar": {
+        "value": "{color.primitive.overlay.gray-900-32}",
+        "type": "color"
+      },
+      "datatable": {
+        "item": {
+          "enabled": { "value": "{color.primitive.white}", "type": "color" },
+          "hover": { "value": "{color.primitive.gray.250}", "type": "color" },
+          "selected": { "value": "{color.primitive.gray.350}", "type": "color" }
+        },
+        "header": {
+          "enabled": { "value": "{color.primitive.gray.050}", "type": "color" }
+        }
+      },
+      "button": {
+        "secondary-default": {
+          "value": "{color.primitive.white}",
+          "type": "color"
+        },
+        "secondary-selected": {
+          "value": "{color.primitive.blue.250}",
+          "type": "color"
+        },
+        "secondary-disabled": {
+          "value": "{color.primitive.gray.350}",
+          "type": "color"
+        },
+        "brand-default": {
+          "value": "{color.primitive.blue.550}",
+          "type": "color"
+        },
+        "brand-hover": {
+          "value": "{color.primitive.blue.600}",
+          "type": "color"
+        },
+        "brand-disabled": {
+          "value": "{color.primitive.blue.450}",
+          "type": "color"
+        },
+        "danger-default": {
+          "value": "{color.primitive.red.600}",
+          "type": "color"
+        },
+        "danger-hover": {
+          "value": "{color.primitive.red.650}",
+          "type": "color"
+        },
+        "danger-disabled": {
+          "value": "{color.primitive.red.500}",
+          "type": "color"
+        },
+        "warning-default": {
+          "value": "{color.primitive.yellow.500}",
+          "type": "color"
+        },
+        "warning-hover": {
+          "value": "{color.primitive.yellow.550}",
+          "type": "color"
+        },
+        "warning-disabled": {
+          "value": "{color.primitive.yellow.450}",
+          "type": "color"
+        }
+      },
+      "button-ghost": {
+        "ghostbtn-default": {
+          "value": "{color.primitive.overlay.gray-900-0}",
+          "type": "color",
+          "comment": "Figma: color/component/button-ghost/ghostbtn-default. 이전 toast 프레임 부분집합 조회 때는 alias 대상을 못 찾았으나, 전체 primitive 집합에 overlay.gray-900-0(rgba(42,49,55,0))이 정확히 일치하여 참조로 확정."
+        },
+        "ghostbtn-hover": {
+          "value": "{color.primitive.gray.250}",
+          "type": "color"
+        },
+        "ghostbtn-activated": {
+          "value": "{color.primitive.gray.350}",
+          "type": "color"
+        },
+        "ghostbtn-selected": {
+          "value": "{color.primitive.blue.250}",
+          "type": "color"
+        }
+      },
+      "box": {
+        "box-default": { "value": "{color.primitive.white}", "type": "color" },
+        "box-disabled": {
+          "value": "{color.primitive.gray.350}",
+          "type": "color"
+        }
+      },
+      "box-ghost": {
+        "default": { "value": "{color.primitive.gray.250}", "type": "color" },
+        "ghost_box-on_colorbg": {
+          "value": "{color.primitive.overlay.gray-900-40}",
+          "type": "color"
+        },
+        "ghost_box-on_darkbg": {
+          "value": "{color.primitive.white}",
+          "type": "color"
+        },
+        "hover": { "value": "{color.primitive.gray.350}", "type": "color" },
+        "disabled": { "value": "{color.primitive.gray.350}", "type": "color" },
+        "populated": {
+          "value": "{color.primitive.purple.200}",
+          "type": "color"
+        },
+        "populated-hover": {
+          "value": "{color.primitive.purple.250}",
+          "type": "color"
+        },
+        "activated-inputfield": {
+          "value": "{color.primitive.white}",
+          "type": "color"
+        }
+      },
+      "tooltip": {
+        "bg": {
+          "value": "{color.primitive.overlay.gray-900-90}",
+          "type": "color"
+        }
+      }
+    },
+    "icon": {
+      "enabled-1-primary": {
+        "value": "{color.primitive.gray.750}",
+        "type": "color"
+      },
+      "enabled-2-secondary": {
+        "value": "{color.primitive.gray.700}",
+        "type": "color"
+      },
+      "enabled-3-muted": {
+        "value": "{color.primitive.gray.150}",
+        "type": "color"
+      },
+      "selected": { "value": "{color.primitive.blue.600}", "type": "color" },
+      "disabled": { "value": "{color.primitive.gray.550}", "type": "color" },
+      "enabled-white": { "value": "{color.primitive.white}", "type": "color" }
+    },
+    "text": {
+      "gray-0-primary": {
+        "value": "{color.primitive.gray.950}",
+        "type": "color"
+      },
+      "gray-1-secondary": {
+        "value": "{color.primitive.gray.900}",
+        "type": "color"
+      },
+      "gray-2-tertiary": {
+        "value": "{color.primitive.gray.850}",
+        "type": "color"
+      },
+      "gray-3-quaternary": {
+        "value": "{color.primitive.gray.750}",
+        "type": "color"
+      },
+      "gray-4-quinary": {
+        "value": "{color.primitive.gray.700}",
+        "type": "color"
+      },
+      "gray-5-senary": {
+        "value": "{color.primitive.gray.650}",
+        "type": "color"
+      },
+      "gray-6-septenary": {
+        "value": "{color.primitive.gray.550}",
+        "type": "color"
+      },
+      "link": {
+        "value": "{color.primitive.purple.650}",
+        "type": "color",
+        "comment": "Figma: color/text/link (#515e94). 이전 toast 프레임 부분집합 조회 때는 alias 대상을 못 찾았으나, 전체 primitive 집합에 purple.650이 정확히 일치하여 참조로 확정."
+      },
+      "link-hover": {
+        "value": "{color.primitive.purple.750}",
+        "type": "color"
+      },
+      "link-opened": {
+        "value": "{color.primitive.purple.550}",
+        "type": "color"
+      },
+      "brand": { "value": "{color.primitive.blue.550}", "type": "color" },
+      "button": {
+        "brand-default": {
+          "value": "{color.primitive.white}",
+          "type": "color"
+        },
+        "brand-disabled": {
+          "value": "{color.primitive.blue.350}",
+          "type": "color"
+        },
+        "secondary-default": {
+          "value": "{color.primitive.gray.850}",
+          "type": "color"
+        },
+        "secondary-disabled": {
+          "value": "{color.primitive.gray.550}",
+          "type": "color"
+        },
+        "secondary-activated": {
+          "value": "{color.primitive.blue.600}",
+          "type": "color"
+        },
+        "danger-default": {
+          "value": "{color.primitive.white}",
+          "type": "color"
+        },
+        "on_danger-disabled": {
+          "value": "{color.primitive.red.300}",
+          "type": "color"
+        },
+        "warning-default": {
+          "value": "{color.primitive.white}",
+          "type": "color"
+        },
+        "warning-disabled": {
+          "value": "{color.primitive.yellow.300}",
+          "type": "color"
+        }
+      },
+      "button-ghost": {
+        "default": { "value": "{color.primitive.gray.750}", "type": "color" },
+        "disabled": { "value": "{color.primitive.gray.550}", "type": "color" },
+        "bg-dark": { "value": "{color.primitive.gray.150}", "type": "color" }
+      },
+      "danger": { "value": "{color.primitive.red.650}", "type": "color" },
+      "warning": { "value": "{color.primitive.yellow.600}", "type": "color" },
+      "button-ghost-link": {
+        "default": { "value": "{color.primitive.purple.600}", "type": "color" },
+        "disabled": { "value": "{color.primitive.gray.550}", "type": "color" }
+      },
+      "box": {
+        "default": { "value": "{color.primitive.gray.850}", "type": "color" },
+        "hint": { "value": "{color.primitive.gray.650}", "type": "color" },
+        "disabled": { "value": "{color.primitive.gray.550}", "type": "color" },
+        "selected": { "value": "{color.primitive.gray.850}", "type": "color" }
+      },
+      "box-ghost": {
+        "default": { "value": "{color.primitive.gray.750}", "type": "color" },
+        "hint": { "value": "{color.primitive.gray.650}", "type": "color" },
+        "selected": { "value": "{color.primitive.gray.850}", "type": "color" },
+        "bg-dark": { "value": "{color.primitive.gray.150}", "type": "color" }
+      }
+    },
+    "line": {
+      "1-primary": { "value": "{color.primitive.gray.550}", "type": "color" },
+      "2-secondary": { "value": "{color.primitive.gray.500}", "type": "color" },
+      "3-tertiary": { "value": "{color.primitive.gray.450}", "type": "color" },
+      "4-quaternary": {
+        "value": "{color.primitive.gray.400}",
+        "type": "color"
+      },
+      "5-quinary": { "value": "{color.primitive.gray.350}", "type": "color" },
+      "6-senary": { "value": "{color.primitive.gray.250}", "type": "color" },
+      "7-septenary": { "value": "{color.primitive.gray.200}", "type": "color" },
+      "datatable-item": {
+        "x-enabled": { "value": "{color.primitive.gray.350}", "type": "color" },
+        "x-hover": { "value": "{color.primitive.gray.350}", "type": "color" },
+        "x-selected": {
+          "value": "{color.primitive.gray.400}",
+          "type": "color"
+        },
+        "y-default": { "value": "{color.primitive.gray.400}", "type": "color" }
+      }
+    },
+    "border": {
+      "button-secondary": {
+        "enabled": { "value": "{color.primitive.gray.400}", "type": "color" },
+        "hover": { "value": "{color.primitive.gray.550}", "type": "color" },
+        "activated": { "value": "{color.primitive.blue.550}", "type": "color" },
+        "activated-hover": {
+          "value": "{color.primitive.blue.600}",
+          "type": "color"
+        },
+        "selected": { "value": "{color.primitive.gray.450}", "type": "color" },
+        "selected-hover": {
+          "value": "{color.primitive.gray.500}",
+          "type": "color"
+        }
+      },
+      "focused": { "value": "{color.primitive.blue.600}", "type": "color" },
+      "box": {
+        "enabled-disabled-selected": {
+          "value": "{color.primitive.gray.450}",
+          "type": "color",
+          "comment": "Figma 원본 키: 'enabled,-disabled,-selected' (콤마 포함 → CSS-safe 하게 정규화)"
+        },
+        "hover-selected-hover": {
+          "value": "{color.primitive.gray.550}",
+          "type": "color",
+          "comment": "Figma 원본 키: 'hover,-selected_hover' (콤마 포함 → CSS-safe 하게 정규화)"
+        },
+        "select-activated": {
+          "value": "{color.primitive.blue.550}",
+          "type": "color"
+        }
+      },
+      "box-ghost": {
+        "disabled": { "value": "{color.primitive.gray.400}", "type": "color" },
+        "populated": {
+          "value": "{color.primitive.purple.250}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

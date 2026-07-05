@@ -1,0 +1,236 @@
+{
+  "fileName": "Library_AI_Test",
+  "textStyles": [
+    {
+      "name": "label/xl-16-500",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Medium",
+      "fontSize": 16,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "label/lg-14-500",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Medium",
+      "fontSize": 14,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "label/md-14-400",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Regular",
+      "fontSize": 14,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "label/sm-12-500",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Medium",
+      "fontSize": 12,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "label/xs-12-400",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Regular",
+      "fontSize": 12,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "label/xxs-11-400",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Regular",
+      "fontSize": 11,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "body/lg-16-500",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Medium",
+      "fontSize": 16,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "body/md-14-400",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Regular",
+      "fontSize": 14,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "body/sm-12-400",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Regular",
+      "fontSize": 12,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading/2xl-44-600",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "SemiBold",
+      "fontSize": 44,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading/xl-32-600",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "SemiBold",
+      "fontSize": 32,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading/lg-24-600",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "SemiBold",
+      "fontSize": 24,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading/md-20-600",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "SemiBold",
+      "fontSize": 20,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading/sm-16-600",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "SemiBold",
+      "fontSize": 16,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading/xs-14-500",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Medium",
+      "fontSize": 14,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading/2xs-12-500",
+      "fontFamily": "Pretendard GOV",
+      "fontWeight": "Medium",
+      "fontSize": 12,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading-sss/2xl-40-700",
+      "fontFamily": "Samsung Sharp Sans",
+      "fontWeight": "Bold",
+      "fontSize": 40,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading-sss/xl-28-700",
+      "fontFamily": "Samsung Sharp Sans",
+      "fontWeight": "Bold",
+      "fontSize": 28,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading-sss/lg-22-700",
+      "fontFamily": "Samsung Sharp Sans",
+      "fontWeight": "Bold",
+      "fontSize": 22,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading-sss/md-19-700",
+      "fontFamily": "Samsung Sharp Sans",
+      "fontWeight": "Bold",
+      "fontSize": 19,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    },
+    {
+      "name": "heading-sss/sm-13-700",
+      "fontFamily": "Samsung Sharp Sans",
+      "fontWeight": "Bold",
+      "fontSize": 13,
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "textCase": "ORIGINAL"
+    }
+  ]
+}
