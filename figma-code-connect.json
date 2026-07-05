@@ -1,4 +1,131 @@
 {
   "_설명": "Figma Code Connect 매핑. Claude Code에서 get_code_connect_suggestions 실행 후 자동 생성됨.",
-  "mappings": {}
+  "mappings": {
+    "BtnBrandPrimary": {
+      "figmaNodeUrl": "https://www.figma.com/design/EactU9SQsOXYD5e50gFPJ3/Library_AI_Test?node-id=11153-21743",
+      "component": "BtnBrand",
+      "path": "src/components/ui/BtnBrand/BtnBrand.tsx",
+      "props": {
+        "size": {
+          "figma": "size (sm/md/lg)",
+          "code": "size?: 'sm' | 'md' | 'lg' (default 'md')"
+        },
+        "icon": {
+          "figma": "icon (none/before/after/only)",
+          "code": "iconPosition?: 'none' | 'left' | 'right' | 'only' (default 'none'), icon?: React.ReactNode"
+        },
+        "state": {
+          "figma": "state (enabled/hover-pressed/disabled)",
+          "code": "enabled/hover-pressed -> CSS :hover, :active 의사클래스 (props 아님). disabled -> disabled?: boolean"
+        }
+      },
+      "notes": [
+        "아이콘 슬롯은 Figma의 QA용 더미(GuideIconDummySet)를 실제 값으로 사용하지 않고, border:1px solid currentColor 기반 빈 placeholder box(.BtnBrand__iconSlot)로 대체 구현함.",
+        "line-height 토큰이 프로젝트에 없어 리터럴 값(sm:14px, md/lg:20px) 사용 - BtnBrand.tsx TODO 주석 참고.",
+        "lg+iconPosition='left'+enabled 조합의 height:28px는 Figma 응답에서 명시적으로 확인되지 않아 다른 lg 조합에서 유추함 - BtnBrand.tsx TODO 주석 참고."
+      ]
+    },
+    "btn_2ndary": {
+      "figmaNodeUrl": "https://www.figma.com/design/EactU9SQsOXYD5e50gFPJ3/Library_AI_Test?node-id=13826-18407",
+      "component": "BtnSecondary",
+      "path": "src/components/ui/BtnSecondary/BtnSecondary.tsx",
+      "props": {
+        "size": {
+          "figma": "size (sm/md/lg)",
+          "code": "size?: 'sm' | 'md' | 'lg' (default 'md')"
+        },
+        "icon": {
+          "figma": "icon (none/before/after/only)",
+          "code": "iconPosition?: 'none' | 'left' | 'right' | 'only' (default 'none'), icon?: React.ReactNode"
+        },
+        "state": {
+          "figma": "state (enabled/hover-pressed/disabled/activated/activated_hover/selected)",
+          "code": "enabled/hover-pressed -> state='default' + CSS :hover, :active 의사클래스. activated/activated_hover -> state='activated' + CSS :hover, :active. selected -> state='selected' (hover variant 없음). disabled -> disabled?: boolean (state보다 항상 우선)"
+        }
+      },
+      "notes": [
+        "아이콘 슬롯은 BtnBrand와 동일하게 border:1px solid currentColor 기반 빈 placeholder box(.BtnSecondary__iconSlot)로 대체 구현함. Figma 더미 아이콘은 16x16 고정, icon-only 박스만 사이즈별로 커짐(20/24/28px).",
+        "line-height 토큰이 프로젝트에 없어 리터럴 값(sm:14px, md/lg:20px) 사용 - BtnSecondary.tsx TODO 주석 참고.",
+        "텍스트 레이어 자체에는 padding이 없음을 Figma에서 명시적으로 확인함 (BtnBrand의 text-box py 이슈와 달리 이번엔 숨은 padding 레이어 없음).",
+        "md 사이즈만 iconPosition(left/right)에 따라 좌우 padding이 비대칭(Figma 원본 값 그대로 재현). sm/lg는 대칭 - Figma 소스 자체의 일관성 이슈로 보이나 원본 충실 재현.",
+        "hover/pressed 시 배경은 유지되고 보더 색상만 변경됨 - 의도된 디자인으로 확인됨 (버그 아님).",
+        "Figma의 icon='after'에 딸린 별도 boolean prop(2개 아이콘 동시 노출, 임시 명칭 'iconOnlyBefore')은 실사용 여부 불명확하여 이번 구현 범위에서 제외함.",
+        "--color-border-button-secondary-selected-hover 토큰은 대응하는 Figma state(selected+hover 조합)가 없어 이번 컴포넌트에서 사용하지 않음."
+      ]
+    },
+    "text-single": {
+      "figmaNodeUrl": "https://www.figma.com/design/EactU9SQsOXYD5e50gFPJ3/Library_AI_Test?node-id=13828-11147",
+      "component": "BoxTextSingle",
+      "path": "src/components/ui/BoxTextSingle/BoxTextSingle.tsx",
+      "storybookTitle": "UI/Box/Text/text-single",
+      "props": {
+        "size": {
+          "figma": "size (sm/md/lg)",
+          "code": "size?: 'sm' | 'md' | 'lg' (default 'md')"
+        },
+        "state": {
+          "figma": "state (enabled/hover-pressed/disabled/activated(inputfield)/populated/populated_hover)",
+          "code": "state prop 없음 - 실제 <input>의 네이티브 상태를 그대로 사용. enabled/hover-pressed -> CSS :hover. activated(inputfield) -> CSS :focus. populated/populated_hover -> CSS :not(:placeholder-shown)(+ :hover). disabled -> disabled?: boolean (항상 최우선)"
+        },
+        "buttonInfo": {
+          "figma": "buttonInfo (boolean)",
+          "code": "showInfoButton?: boolean, infoIcon?: React.ReactNode"
+        },
+        "xDelete": {
+          "figma": "xDelete (boolean)",
+          "code": "showClearButton?: boolean, clearIcon?: React.ReactNode"
+        },
+        "textMessage": {
+          "figma": "textMessageDefault/textMessageEmphasized/textMessageDanger (상호 배타적 boolean 3종)",
+          "code": "message?: string, messageType?: 'default' | 'emphasized' | 'danger' (단일 enum으로 정규화)"
+        }
+      },
+      "notes": [
+        "state는 별도 prop이 아니라 실제 <input> 요소의 네이티브 DOM 상태(:hover, :focus, :not(:placeholder-shown), :disabled)로 구현됨 - BtnBrand/BtnSecondary의 explicit state prop 방식과 다름 (사용자 승인 결정).",
+        "activated(inputfield) 상태의 텍스트/보더 색상은 Figma가 text/gray-2-tertiary, border/button-secondary/activated를 참조하지만(값은 동일), box 전용 시맨틱 토큰(--color-text-box-default, --color-border-box-select-activated)으로 정규화해서 사용함 - Figma 파일의 변수 바인딩 실수로 추정 (사용자 승인 결정).",
+        "line-height 토큰이 프로젝트에 없어 리터럴 값(sm:14px, md/lg:20px, message:12px) 사용 - BoxTextSingle.tsx TODO 주석 참고.",
+        "내부 텍스트 wrapper의 padding-top/bottom은 sm=3px, md/lg=4px로 사이즈별로 다름 (최초 조사 때 '전 사이즈 공통 4px'로 잘못 결론났던 것을 sm 시각 정렬 이슈 제보 후 재조사해 정정함 - BtnBrand 때와 동일한 패턴의 실수). md/lg의 4px는 --spacing-button-box-py-lg와 값이 같지만, 버튼 전용 토큰과의 의도치 않은 결합을 피하기 위해 리터럴 값 + TODO로 유지 (사용자 명시적 결정 - button 토큰 재사용 안 함). 추후 textbox 전용 spacing 토큰 필요성 검토 예정.",
+        "컨테이너 padding-top/bottom은 0 - 세로 정렬은 텍스트 wrapper의 py와 flex items-center로 처리. 텍스트 wrapper(<span>)는 반드시 inline-flex items-center여야 함 - 처음 구현 시 이걸 빠뜨려서 <input>이 padding 기준이 아니라 baseline 정렬로 배치되어 모든 사이즈에서 상하 padding이 비대칭으로 보이는 버그가 있었음(sm에서 가장 눈에 띄었으나 md/lg도 동일하게 어긋나 있었음, DOM 실측으로 확인 후 수정).",
+        "populated/populated_hover 상태의 보더 색상은 enabled/hover와 완전히 동일한 값이라 별도 CSS 없이 자동으로 일치함 (Figma에서 확인됨).",
+        "info/clear 아이콘은 BtnBrand와 동일하게 16x16 outline placeholder box로 구현, 실제 클릭 핸들러(정보 툴팁 표시, 값 지우기 로직)는 이번 구현 범위에서 제외 - 표시 여부(boolean)만 제어.",
+        "컨테이너 width는 Figma 응답상 min 120/max 160px 힌트가 있었으나 데모 캔버스의 auto-layout 아티팩트로 추정되어 min-w-[120px]만 적용하고 max-width는 강제하지 않음.",
+        "하단 메시지와 텍스트박스 사이의 세로 gap 값은 Figma 조사에서 확인되지 않아 별도 gap 없이 배치함 - 값 추측 금지 원칙에 따름, 필요 시 재확인 후 추가 예정."
+      ]
+    },
+    "Header-GNB": {
+      "figmaNodeUrl": "https://www.figma.com/design/9txPUL4k3jrdE4Dx6eWXAA/tpss?node-id=11310-5539",
+      "component": "Gnb",
+      "path": "src/components/ui/Gnb/Gnb.tsx",
+      "props": {
+        "menuItems": {
+          "figma": "5개 Menu 인스턴스(종합효율/TAT생산성/BRAVO/기준정보/혁신정보) 반복",
+          "code": "menuItems?: { label: string; onClick?: () => void }[] (기본값 5개 그대로)"
+        },
+        "search": {
+          "figma": "search-ghost/sm/enabled 인스턴스",
+          "code": "searchValue?: string, onSearchChange?: (value: string) => void, searchPlaceholder?: string"
+        },
+        "notification": {
+          "figma": "공지사항 Badge-Dot",
+          "code": "hasNotification?: boolean (기본 true)"
+        },
+        "profile/timer": {
+          "figma": "프로필 '이삼성', 03:00:11 텍스트",
+          "code": "profileName?: string, timerLabel?: string"
+        }
+      },
+      "notes": [
+        "회사 공식 GNB 컴포넌트가 이미 존재하지만 다른 토큰 이름 체계(예: blue500)를 사용함 - 이 프로젝트에서는 회사 이름 체계를 따르지 않고 tokens_raw.json 기반 자체 토큰만 사용해서 시각적으로 동일하게 재구현함 (사용자 지정 결정).",
+        "Admin 드롭다운 화살표 / 도움 아이콘 / 프로필 드롭다운 화살표는 Figma 파일 자체에서 실제 아이콘이 할당되지 않은 더미 placeholder 상태(Guide/Icon-dummy_area-14, #ffd9d7)로 확인됨 - 그 값을 쓰지 않고 간단한 SVG를 직접 그려 대체함 (사용자 승인 결정). 검색/즐겨찾기 별/시계 아이콘도 실제 에셋 미제공으로 동일하게 직접 그림. VOC Agent 좌측 아이콘만 BoxTextSingle과 동일한 border 기반 placeholder box로 대체.",
+        "메뉴 항목 5개 중 앞 3개(종합효율/TAT생산성/BRAVO)는 Figma 응답에서 실제 스타일 값이 노출되지 않아 뒤 2개(기준정보/혁신정보)와 동일 컴포넌트명(Header-GNB/On_DarkBG/Menu/Enabled)이라는 근거로 동일 스타일이라고 유추해서 적용함 (사용자 승인 결정) - 실측 재확인은 하지 않음.",
+        "activated/selected 메뉴 상태는 Figma 프레임에 variant가 존재하지 않아 구현하지 않음 (추측 금지 원칙).",
+        "SamsungOneKoreanNoF(SOK) 폰트 패밀리가 5곳(공지사항/도움/03:00:11/권한신청/프로필)에 쓰였으나 프로젝트 토큰에 없어 기존 Pretendard GOV로 대체, letter-spacing도 Figma 실측 0.8px 대신 기존 heading-sss류 토큰 관례에 맞춰 0 유지 (사용자 승인 결정). 로고 TPSS와 VOC Agent 텍스트(Samsung Sharp Sans)도 동일한 이유로 letter-spacing 0 유지.",
+        "팔레트에 정확히 없는 근접 색상들은 가장 가까운 기존 토큰으로 통일함: 검색창 배경 rgba(40,48,55,0.32)→--color-primitive-overlay-gray-900-32, 유틸리티 텍스트 #f3f6f8→--color-text-button-ghost-bg-dark(gray.150), VOC Agent 텍스트 #f7fbfd→--color-primitive-teal-050 (사용자 승인 결정).",
+        "팔레트에 카테고리 자체가 없는 색상 3건(로고/메뉴 구분선 rgba(255,255,255,0.3), ViewSQL 토글 배경 rgba(0,0,0,0.1)/보더 rgba(0,0,0,0.08))은 리터럴 값 + TODO 주석으로 처리 (사용자 승인 결정) - Gnb.tsx TODO 주석 참고.",
+        "공지사항 배지닷 정확한 red 값과 검색창 placeholder/아이콘 색·보더 유무는 Figma에서 확인 불가(컴포넌트 collapse)하여 근사치로 진행함 (사용자 승인 결정) - 배지닷은 --color-text-danger, 검색 placeholder는 유틸리티 텍스트와 동일 색 사용, 보더는 생략.",
+        "VOC Agent 텍스트 font-size 11px는 heading-sss 토큰 스케일(최소 13px)에 없어 리터럴 값 + TODO 주석 사용 - Gnb.tsx 참고.",
+        "GNB 전체 그림자는 Bottleneck 카드와 동일하게 Tailwind 기본 shadow-xs 유틸리티를 재사용함 (Figma raw 값과 미세한 blur radius 차이 있음, 이전에 이미 승인된 처리 방식)."
+      ]
+    }
+  }
 }

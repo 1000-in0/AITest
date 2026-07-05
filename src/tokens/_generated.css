@@ -24,8 +24,8 @@
   --spacing-primitive-40: 40px;
   --spacing-none: 0px; /** Figma: spacing/none = 0px. primitive 스케일에 0 항목이 없어 리터럴 값 사용. */
   --spacing-button-box-py-sm: 0px; /** Figma: tokens(spacing).spacing['button,-box'].py.sm = 0px, primitive 스케일에 0 항목이 없어 리터럴 값 사용. */
-  --typography-font-family-pretendard-gov: 'Pretendard GOV'; /** ⚠️ foundations(style).fontfamilies.pretendard 원본 값은 'ptdg'(내부 식별자로 추정)였으나, textStyles_raw.json 전체 21개 항목에서 실사용되는 표기 'Pretendard GOV'를 채택함. 불일치 확인됨 — 원본 설계자 확인 필요. */
-  --typography-font-family-samsung-sharp-sans: 'Samsung Sharp Sans'; /** foundations(style).fontfamilies.samsung-sharp-sans 값과 정확히 일치. */
+  --typography-font-family-pretendard-gov: "Pretendard GOV"; /** ⚠️ foundations(style).fontfamilies.pretendard 원본 값은 'ptdg'(내부 식별자로 추정)였으나, textStyles_raw.json 전체 21개 항목에서 실사용되는 표기 'Pretendard GOV'를 채택함. 불일치 확인됨 — 원본 설계자 확인 필요. */
+  --typography-font-family-samsung-sharp-sans: "Samsung Sharp Sans"; /** foundations(style).fontfamilies.samsung-sharp-sans 값과 정확히 일치. */
   --typography-font-weight-regular: 400; /** Figma fontWeight 'Regular'의 표준 CSS 매핑값(관례 적용). foundations(style).fontweights에 해당 항목 없음. */
   --typography-font-weight-medium: 500; /** Figma fontWeight 'Medium'의 표준 CSS 매핑값(관례 적용). foundations(style).fontweights에 해당 항목 없음. */
   --typography-font-weight-semibold: 600; /** Figma fontWeight 'SemiBold'의 표준 CSS 매핑값(관례 적용). foundations(style).fontweights에 해당 항목 없음. */
@@ -95,7 +95,12 @@
   --typography-heading-sss-sm-13-700-text-transform: none;
   --color-primitive-white: #ffffff;
   --color-primitive-black: #000000;
-  --color-primitive-alpha: rgba(0, 0, 0, 0); /** Figma: primitives(atomic).light.colors.alpha. 현재 확인된 semantic 토큰 중 이 값을 직접 참조하는 곳은 없음(참고용 보존). */
+  --color-primitive-alpha: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /** Figma: primitives(atomic).light.colors.alpha. 현재 확인된 semantic 토큰 중 이 값을 직접 참조하는 곳은 없음(참고용 보존). */
   --color-primitive-overlay-gray-900-0: rgba(42, 49, 55, 0);
   --color-primitive-overlay-gray-900-32: rgba(42, 49, 55, 0.32);
   --color-primitive-overlay-gray-900-40: rgba(42, 49, 55, 0.4);
@@ -302,49 +307,133 @@
   --spacing-button-box-py-3xl: var(--spacing-primitive-12);
   --spacing-button-box-gap-sm: var(--spacing-primitive-2);
   --spacing-button-box-gap-default: var(--spacing-primitive-4);
-  --typography-label-xl-16-500-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-label-xl-16-500-font-weight: var(--typography-font-weight-medium);
-  --typography-label-lg-14-500-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-label-lg-14-500-font-weight: var(--typography-font-weight-medium);
-  --typography-label-md-14-400-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-label-md-14-400-font-weight: var(--typography-font-weight-regular);
-  --typography-label-sm-12-500-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-label-sm-12-500-font-weight: var(--typography-font-weight-medium);
-  --typography-label-xs-12-400-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-label-xs-12-400-font-weight: var(--typography-font-weight-regular);
-  --typography-label-xxs-11-400-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-label-xxs-11-400-font-weight: var(--typography-font-weight-regular);
-  --typography-body-lg-16-500-font-family: var(--typography-font-family-pretendard-gov);
+  --typography-label-xl-16-500-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-label-xl-16-500-font-weight: var(
+    --typography-font-weight-medium
+  );
+  --typography-label-lg-14-500-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-label-lg-14-500-font-weight: var(
+    --typography-font-weight-medium
+  );
+  --typography-label-md-14-400-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-label-md-14-400-font-weight: var(
+    --typography-font-weight-regular
+  );
+  --typography-label-sm-12-500-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-label-sm-12-500-font-weight: var(
+    --typography-font-weight-medium
+  );
+  --typography-label-xs-12-400-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-label-xs-12-400-font-weight: var(
+    --typography-font-weight-regular
+  );
+  --typography-label-xxs-11-400-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-label-xxs-11-400-font-weight: var(
+    --typography-font-weight-regular
+  );
+  --typography-body-lg-16-500-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
   --typography-body-lg-16-500-font-weight: var(--typography-font-weight-medium);
-  --typography-body-md-14-400-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-body-md-14-400-font-weight: var(--typography-font-weight-regular);
-  --typography-body-sm-12-400-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-body-sm-12-400-font-weight: var(--typography-font-weight-regular);
-  --typography-heading-2xl-44-600-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-heading-2xl-44-600-font-weight: var(--typography-font-weight-semibold);
-  --typography-heading-2xl-44-600-font-size: var(--typography-font-size-44); /** 'sok_heading' 추정 primitive를 참조 — 위 typography.font-size.44 주석 참고. */
-  --typography-heading-xl-32-600-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-heading-xl-32-600-font-weight: var(--typography-font-weight-semibold);
-  --typography-heading-lg-24-600-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-heading-lg-24-600-font-weight: var(--typography-font-weight-semibold);
-  --typography-heading-md-20-600-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-heading-md-20-600-font-weight: var(--typography-font-weight-semibold);
-  --typography-heading-sm-16-600-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-heading-sm-16-600-font-weight: var(--typography-font-weight-semibold);
-  --typography-heading-xs-14-500-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-heading-xs-14-500-font-weight: var(--typography-font-weight-medium);
-  --typography-heading-2xs-12-500-font-family: var(--typography-font-family-pretendard-gov);
-  --typography-heading-2xs-12-500-font-weight: var(--typography-font-weight-medium);
-  --typography-heading-sss-2xl-40-700-font-family: var(--typography-font-family-samsung-sharp-sans);
-  --typography-heading-sss-2xl-40-700-font-weight: var(--typography-font-weight-bold);
-  --typography-heading-sss-xl-28-700-font-family: var(--typography-font-family-samsung-sharp-sans);
-  --typography-heading-sss-xl-28-700-font-weight: var(--typography-font-weight-bold);
-  --typography-heading-sss-lg-22-700-font-family: var(--typography-font-family-samsung-sharp-sans);
-  --typography-heading-sss-lg-22-700-font-weight: var(--typography-font-weight-bold);
-  --typography-heading-sss-md-19-700-font-family: var(--typography-font-family-samsung-sharp-sans);
-  --typography-heading-sss-md-19-700-font-weight: var(--typography-font-weight-bold);
-  --typography-heading-sss-sm-13-700-font-family: var(--typography-font-family-samsung-sharp-sans);
-  --typography-heading-sss-sm-13-700-font-weight: var(--typography-font-weight-bold);
+  --typography-body-md-14-400-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-body-md-14-400-font-weight: var(
+    --typography-font-weight-regular
+  );
+  --typography-body-sm-12-400-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-body-sm-12-400-font-weight: var(
+    --typography-font-weight-regular
+  );
+  --typography-heading-2xl-44-600-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-heading-2xl-44-600-font-weight: var(
+    --typography-font-weight-semibold
+  );
+  --typography-heading-2xl-44-600-font-size: var(
+    --typography-font-size-44
+  ); /** 'sok_heading' 추정 primitive를 참조 — 위 typography.font-size.44 주석 참고. */
+  --typography-heading-xl-32-600-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-heading-xl-32-600-font-weight: var(
+    --typography-font-weight-semibold
+  );
+  --typography-heading-lg-24-600-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-heading-lg-24-600-font-weight: var(
+    --typography-font-weight-semibold
+  );
+  --typography-heading-md-20-600-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-heading-md-20-600-font-weight: var(
+    --typography-font-weight-semibold
+  );
+  --typography-heading-sm-16-600-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-heading-sm-16-600-font-weight: var(
+    --typography-font-weight-semibold
+  );
+  --typography-heading-xs-14-500-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-heading-xs-14-500-font-weight: var(
+    --typography-font-weight-medium
+  );
+  --typography-heading-2xs-12-500-font-family: var(
+    --typography-font-family-pretendard-gov
+  );
+  --typography-heading-2xs-12-500-font-weight: var(
+    --typography-font-weight-medium
+  );
+  --typography-heading-sss-2xl-40-700-font-family: var(
+    --typography-font-family-samsung-sharp-sans
+  );
+  --typography-heading-sss-2xl-40-700-font-weight: var(
+    --typography-font-weight-bold
+  );
+  --typography-heading-sss-xl-28-700-font-family: var(
+    --typography-font-family-samsung-sharp-sans
+  );
+  --typography-heading-sss-xl-28-700-font-weight: var(
+    --typography-font-weight-bold
+  );
+  --typography-heading-sss-lg-22-700-font-family: var(
+    --typography-font-family-samsung-sharp-sans
+  );
+  --typography-heading-sss-lg-22-700-font-weight: var(
+    --typography-font-weight-bold
+  );
+  --typography-heading-sss-md-19-700-font-family: var(
+    --typography-font-family-samsung-sharp-sans
+  );
+  --typography-heading-sss-md-19-700-font-weight: var(
+    --typography-font-weight-bold
+  );
+  --typography-heading-sss-sm-13-700-font-family: var(
+    --typography-font-family-samsung-sharp-sans
+  );
+  --typography-heading-sss-sm-13-700-font-weight: var(
+    --typography-font-weight-bold
+  );
   --color-shape-brand: var(--color-primitive-blue-550);
   --color-bg-background: var(--color-primitive-gray-250);
   --color-bg-surface-primary: var(--color-primitive-white);
@@ -369,20 +458,34 @@
   --color-component-button-warning-default: var(--color-primitive-yellow-500);
   --color-component-button-warning-hover: var(--color-primitive-yellow-550);
   --color-component-button-warning-disabled: var(--color-primitive-yellow-450);
-  --color-component-button-ghost-ghostbtn-default: var(--color-primitive-overlay-gray-900-0); /** Figma: color/component/button-ghost/ghostbtn-default. 이전 toast 프레임 부분집합 조회 때는 alias 대상을 못 찾았으나, 전체 primitive 집합에 overlay.gray-900-0(rgba(42,49,55,0))이 정확히 일치하여 참조로 확정. */
-  --color-component-button-ghost-ghostbtn-hover: var(--color-primitive-gray-250);
-  --color-component-button-ghost-ghostbtn-activated: var(--color-primitive-gray-350);
-  --color-component-button-ghost-ghostbtn-selected: var(--color-primitive-blue-250);
+  --color-component-button-ghost-ghostbtn-default: var(
+    --color-primitive-overlay-gray-900-0
+  ); /** Figma: color/component/button-ghost/ghostbtn-default. 이전 toast 프레임 부분집합 조회 때는 alias 대상을 못 찾았으나, 전체 primitive 집합에 overlay.gray-900-0(rgba(42,49,55,0))이 정확히 일치하여 참조로 확정. */
+  --color-component-button-ghost-ghostbtn-hover: var(
+    --color-primitive-gray-250
+  );
+  --color-component-button-ghost-ghostbtn-activated: var(
+    --color-primitive-gray-350
+  );
+  --color-component-button-ghost-ghostbtn-selected: var(
+    --color-primitive-blue-250
+  );
   --color-component-box-box-default: var(--color-primitive-white);
   --color-component-box-box-disabled: var(--color-primitive-gray-350);
   --color-component-box-ghost-default: var(--color-primitive-gray-250);
-  --color-component-box-ghost-ghost-box-on-colorbg: var(--color-primitive-overlay-gray-900-40);
+  --color-component-box-ghost-ghost-box-on-colorbg: var(
+    --color-primitive-overlay-gray-900-40
+  );
   --color-component-box-ghost-ghost-box-on-darkbg: var(--color-primitive-white);
   --color-component-box-ghost-hover: var(--color-primitive-gray-350);
   --color-component-box-ghost-disabled: var(--color-primitive-gray-350);
   --color-component-box-ghost-populated: var(--color-primitive-purple-200);
-  --color-component-box-ghost-populated-hover: var(--color-primitive-purple-250);
-  --color-component-box-ghost-activated-inputfield: var(--color-primitive-white);
+  --color-component-box-ghost-populated-hover: var(
+    --color-primitive-purple-250
+  );
+  --color-component-box-ghost-activated-inputfield: var(
+    --color-primitive-white
+  );
   --color-component-tooltip-bg: var(--color-primitive-overlay-gray-900-90);
   --color-icon-enabled-1-primary: var(--color-primitive-gray-750);
   --color-icon-enabled-2-secondary: var(--color-primitive-gray-700);
@@ -397,7 +500,9 @@
   --color-text-gray-4-quinary: var(--color-primitive-gray-700);
   --color-text-gray-5-senary: var(--color-primitive-gray-650);
   --color-text-gray-6-septenary: var(--color-primitive-gray-550);
-  --color-text-link: var(--color-primitive-purple-650); /** Figma: color/text/link (#515e94). 이전 toast 프레임 부분집합 조회 때는 alias 대상을 못 찾았으나, 전체 primitive 집합에 purple.650이 정확히 일치하여 참조로 확정. */
+  --color-text-link: var(
+    --color-primitive-purple-650
+  ); /** Figma: color/text/link (#515e94). 이전 toast 프레임 부분집합 조회 때는 alias 대상을 못 찾았으나, 전체 primitive 집합에 purple.650이 정확히 일치하여 참조로 확정. */
   --color-text-link-hover: var(--color-primitive-purple-750);
   --color-text-link-opened: var(--color-primitive-purple-550);
   --color-text-brand: var(--color-primitive-blue-550);
@@ -439,12 +544,20 @@
   --color-border-button-secondary-enabled: var(--color-primitive-gray-400);
   --color-border-button-secondary-hover: var(--color-primitive-gray-550);
   --color-border-button-secondary-activated: var(--color-primitive-blue-550);
-  --color-border-button-secondary-activated-hover: var(--color-primitive-blue-600);
+  --color-border-button-secondary-activated-hover: var(
+    --color-primitive-blue-600
+  );
   --color-border-button-secondary-selected: var(--color-primitive-gray-450);
-  --color-border-button-secondary-selected-hover: var(--color-primitive-gray-500);
+  --color-border-button-secondary-selected-hover: var(
+    --color-primitive-gray-500
+  );
   --color-border-focused: var(--color-primitive-blue-600);
-  --color-border-box-enabled-disabled-selected: var(--color-primitive-gray-450); /** Figma 원본 키: 'enabled,-disabled,-selected' (콤마 포함 → CSS-safe 하게 정규화) */
-  --color-border-box-hover-selected-hover: var(--color-primitive-gray-550); /** Figma 원본 키: 'hover,-selected_hover' (콤마 포함 → CSS-safe 하게 정규화) */
+  --color-border-box-enabled-disabled-selected: var(
+    --color-primitive-gray-450
+  ); /** Figma 원본 키: 'enabled,-disabled,-selected' (콤마 포함 → CSS-safe 하게 정규화) */
+  --color-border-box-hover-selected-hover: var(
+    --color-primitive-gray-550
+  ); /** Figma 원본 키: 'hover,-selected_hover' (콤마 포함 → CSS-safe 하게 정규화) */
   --color-border-box-select-activated: var(--color-primitive-blue-550);
   --color-border-box-ghost-disabled: var(--color-primitive-gray-400);
   --color-border-box-ghost-populated: var(--color-primitive-purple-250);
